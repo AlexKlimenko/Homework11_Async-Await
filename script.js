@@ -1,60 +1,5 @@
 // 1st task https://plnkr.co/edit/7ClkqGv1RY6oifYgwQQp?p=preview
 
-// //1st task start///////////////////////////////////////////////////////////////////
-// 
-// //UI
-
-
-
-// Custom Http Module
-// function http() {
-//   return {
-//     async request(url, options) {
-//       const response = await fetch(url, options)
-//         .then(response => {
-//           if (Math.floor(response.status / 100) !== 2) {
-//             return Promise.reject(response);
-//           }
-//           return response.json();
-//         });
-//         return response;
-//     },
-//   };
-// }
-
-// const myHttp = http();
-
-// //functions
-// async function getMarkupAndStyle() {
-//   try {
-//     const response = await myHttp.request('structure.json');
-//     return response;
-//   }catch(err) {
-//     console.log(err);
-//     return Promise.reject(err);
-//   }
-// }
-
-// function renderMarkup(html) {
-//   document.body.insertAdjacentHTML('afterbegin', html);
-// }
-
-// function renderStyle(styles) {
-//   const style = document.createElement('style');
-//   style.textContent =`${styles}`;
-//   document.body.appendChild(style);
-// }
-
-
-
-// getMarkupAndStyle()
-//   .then(value => {
-//     renderMarkup(value.html)
-//     renderStyle(value.styles)
-//   })
-//   .catch(err => console.log(err))
-
-// //1st task end///////////////////////////////////////////////////////////////////
 
 //2nd task start///////////////////////////////////////////////////////////////////
 // UI
@@ -81,8 +26,6 @@ function http() {
 const myHttp = http();
 
 
-
-
 async function getUserWithTasksAmount() {
   try {
     const todos = await myHttp.request('https://jsonplaceholder.typicode.com/todos');
@@ -92,7 +35,6 @@ async function getUserWithTasksAmount() {
     return Promise.reject(err);
   }
 }
-
 
 
 getUserWithTasksAmount()
@@ -118,7 +60,7 @@ getUserWithTasksAmount()
   .catch(err => console.log(err))
 
 //2nd task end///////////////////////////////////////////////////////////////////
-//3d task start///////////////////////////////////////////////////////////////////
+
+//3d task end - https://codepen.io/alexklimenko/pen/dybYjpZ
 
 
-//3d task end///////////////////////////////////////////////////////////////////
